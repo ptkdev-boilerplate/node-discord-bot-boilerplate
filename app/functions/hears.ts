@@ -18,7 +18,10 @@ import bot from "@app/functions/discord";
  */
 const text = async (): Promise<void> => {
 	bot.on("message", (ctx) => {
-		ctx.reply(ctx.content);
+		if (ctx.content === "ciao") {
+			ctx.reply(ctx.content);
+		}
+
 	});
 };
 
