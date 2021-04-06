@@ -1,5 +1,5 @@
 /**
- * Telegraf Hears
+ * Discord Hears
  * =====================
  *
  * @contributors: Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)
