@@ -45,7 +45,7 @@ Create your discord bot with this friendly boilerplate. Use this repository as t
 ## 🚀 Usage: Deploy
 
 1. Clone this repository or download [nightly](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/nightly.zip), [beta](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/beta.zip) or [stable](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/main.zip).
-2. Create new bot on [discord developer page](https://discord.com/developers/applications):
+2. Create new application on [discord developer page](https://discord.com/developers/applications):
 
 -   A. Click "Bot" on left menu, generate new bot and save token for step 3
 -   B. Click "oAuth2" on left menu, go to bottom and set `scope` as `BOT` and check all write permissions. Copy generated link and invite bot to your server.
@@ -60,7 +60,7 @@ Create your discord bot with this friendly boilerplate. Use this repository as t
 #### 🏁 Run Project
 
 1. Clone this repository or download [nightly](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/nightly.zip), [beta](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/beta.zip) or [stable](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/main.zip).
-2. Create new bot on [discord developer page](https://discord.com/developers/applications):
+2. Create new application on [discord developer page](https://discord.com/developers/applications):
 
 -   A. Click "Bot" on left menu, generate new bot and save token for step 3
 -   B. Click "oAuth2" on left menu, go to bottom and set `scope` as `BOT` and check all write permissions. Copy generated link and invite bot to your server.
