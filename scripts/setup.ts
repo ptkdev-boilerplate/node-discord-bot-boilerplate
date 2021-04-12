@@ -120,7 +120,7 @@ const pkg = require("../package.json");
 		await replace({
 			files: ["**/*", ".*", "**/.*"],
 			ignore: ["node_modules/**/*", "setup.json", "package-lock.json", "scripts/setup.ts", ".all-contributorsrc"],
-			from: /Patryk Rzucidło \[@ptkdev\] <support@ptkdev.io> \(https:\/\/ptk.dev\)/g,
+			from: /Patryk Rzucidło \[@ptkdev\] <support@ptkdev.io> \(https:\/\/ptk.dev\)\n \* {16}Alì Shadman \[@AliShadman95\]/g,
 			to: setup.author,
 		});
 	} catch (error) {
