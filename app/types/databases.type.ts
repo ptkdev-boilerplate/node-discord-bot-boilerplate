@@ -89,6 +89,7 @@ export interface DiscordUserInterface {
  *
  * @param { string } title - command title
  * @param { string } response - bot response
+ * @param { boolean } isCustomCommand - is custom command
  *
  */
 export interface DiscordCommandsInterface {
@@ -112,4 +113,14 @@ export interface DiscordCommandsInterface {
 	 *
 	 */
 	response?: string,
+	/**
+	 * Commands Interface
+	 * =====================
+	 *
+	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+	 *
+	 * @param { boolean } isCustomCommand - is custom command
+	 *
+	 */
+	isCustomCommand?: boolean,
 }

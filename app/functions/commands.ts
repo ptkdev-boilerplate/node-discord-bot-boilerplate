@@ -20,11 +20,11 @@ import * as databases from "@app/functions/databases";
  *
  */
 const join = async (): Promise<void> => {
-	bot.on("message", (ctx) => {
-		if (ctx.content === "!join") {
-			const { voice } = ctx.member;
+	bot.on("message", (message: Message) => {
+		if (message.content === "!join") {
+			const { voice } = message.member;
 			if (!voice.channel) {
-				return ctx.reply("Please join a voice channel first!");
+				return message.reply("Please join a voice channel first!");
 			}
 			voice.channel.join();
 		}
@@ -38,41 +38,50 @@ const join = async (): Promise<void> => {
  *
  */
 const create = async (): Promise<void> => {
-	bot.on("message", async (ctx) => {
-		if (ctx.content === "!create") {
-			const filter = (m: { author: { id: string; }; }) => m.author.id === ctx.author.id;
-			await ctx.reply(`Hi, type the command name without the "!"`);
+	bot.on("message", async (message: Message) => {
+		if (message.author.bot) {  // If incoming message is from the bot
+			return;
+		}
+
+		if (!message.member.hasPermission("ADMINISTRATOR")) { // if message author is an admin
+			message.reply("You must be an admin");
+			return;
+		}
+		if (message.content === "!create") {
+			const filter = (m: Message) => m.author.id === message.author.id;
+
+			await message.reply(`Hi, type the command name without the "!"`);
 			try {
 
-				const botName = await ctx.channel.awaitMessages(filter, {
+				const botName = await message.channel.awaitMessages(filter, {
 					max: 1,
 					time: 15000,
 					errors: ["time"]
 				});
 
-				const command = await databases.getSingleCommand({ title: botName.first().content });
+				const command = await databases.getSingleCommand({ title: `!${botName.first().content}` });
 
 				if (typeof command === "undefined") {
-					await ctx.reply(`Ok, tell me what you want it to say.`);
+					await message.reply(`Ok, tell me what you want it to say.`);
 					try {
-						const botMessage = await ctx.channel.awaitMessages(filter, {
+						const botMessage = await message.channel.awaitMessages(filter, {
 							max: 1,
 							time: 15000,
 							errors: ["time"]
 						});
 
-						databases.writeCommand({ title: botName.first().content, response: botMessage.first().content });
-						await ctx.reply(`Ok, bot created. Try !${botName.first().content}`);
+						databases.writeCommand({ title: `!${botName.first().content}`, response: botMessage.first().content, isCustomCommand: true });
+						await message.reply(`Ok, bot created. Try !${botName.first().content}`);
 
 					} catch (collected) {
-						ctx.reply("You did not tell me what you want it to say. Ending the creation.");
+						message.reply("You did not tell me what you want it to say. Ending the creation.");
 					}
 				} else {
-					ctx.reply(`The command **!${botName.first().content}** already exist, try again!`);
+					message.reply(`The command **!${botName.first().content}** already exist, try again!`);
 				}
 
 			} catch (collected) {
-				ctx.reply("You did not tell me the name. Ending the creation.");
+				message.reply("You did not tell me the name. Ending the creation.");
 			}
 
 		}
@@ -85,16 +94,21 @@ const create = async (): Promise<void> => {
  * =====================
  * Send photo from picsum to chat
  *
- * @param message
  */
-const photo = async (message: Message): Promise<void> => {
-	message.reply({
-		embed: {
-			"image": {
-				"url": "https://picsum.photos/200/300/"
-			}
+const photo = async (): Promise<void> => {
+	bot.on("message", (message: Message) => {
+		if (message.content === "!photo") {
+			message.reply({
+				embed: {
+					"image": {
+						"url": "https://picsum.photos/200/300/"
+					}
+				}
+			});
 		}
+
 	});
+
 };
 
 /**
@@ -104,9 +118,9 @@ const photo = async (message: Message): Promise<void> => {
  *
  */
 const start = async (): Promise<void> => {
-	bot.on("message", (ctx) => {
-		if (ctx.content === "!start") {
-			ctx.reply(`Welcome! Try send !photo command or write any text`);
+	bot.on("message", (message: Message) => {
+		if (message.content === "!start") {
+			message.reply(`Welcome! Try send !photo command or write any text`);
 		}
 
 	});
@@ -120,7 +134,6 @@ const start = async (): Promise<void> => {
  *
  */
 const launch = async (): Promise<void> => {
-	databases.deleteAllCommands();
 	bot.login(configs.discord.token);
 };
 

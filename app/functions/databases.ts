@@ -19,7 +19,15 @@ const databases = { users: null, commands: null };
 databases.users = lowdb(new lowdbFileSync(configs.databases.users));
 databases.users.defaults({ users: [] }).write();
 databases.commands = lowdb(new lowdbFileSync(configs.databases.commands));
-databases.commands.defaults({ commands: [{ title: "!start", response: "`Welcome! Try send !photo command or write any text`" }] }).write();
+databases.commands.defaults({
+	commands: [
+		{ title: "!start", response: "`Welcome! Try send !photo command or write any text`", isCustomCommand: false },
+		{ title: "!create", response: "Create command", isCustomCommand: false },
+		{ title: "!photo", response: "Send random photo", isCustomCommand: false },
+		{ title: "!join", response: "Create command", isCustomCommand: false },
+		{ title: "!launch", response: "Launch bot", isCustomCommand: false }]
+
+}).write();
 
 /**
  * writeUser()
@@ -50,12 +58,10 @@ const writeCommand = async (json: DiscordCommandsInterface): Promise<void> => {
 };
 
 const getSingleCommand = async (json: DiscordCommandsInterface): Promise<void> => {
-
 	return databases.commands.get("commands").find({ title: json.title }).value();
 };
 
 const getAllCommands = async (): Promise<[]> => {
-
 	return databases.commands.get("commands").value();
 };
 
