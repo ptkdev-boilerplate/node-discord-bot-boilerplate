@@ -14,4 +14,8 @@ import * as hears from "@app/functions/hears";
 (async () => {
 	await hears.text();
 	await command.launch();
+	await command.start();
+	/* 	await command.photo();
+ */	await command.join();
+	await command.create();
 })();

@@ -8,7 +8,7 @@ module.exports = {
 		token: "BOT_TOKEN",
 	},
 
-	"databases": { users: "databases/users.json" },
+	"databases": { users: "databases/users.json", commands: "databases/commands.json" },
 
 	// Debug
 	"debug": true,

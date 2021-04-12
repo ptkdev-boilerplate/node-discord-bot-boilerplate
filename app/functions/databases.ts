@@ -12,12 +12,14 @@ import lowdb from "lowdb";
 import lowdbFileSync from "lowdb/adapters/FileSync";
 import configs from "@configs/config";
 
-import type { DiscordUserInterface } from "@app/types/databases.type";
+import type { DiscordUserInterface, DiscordCommandsInterface } from "@app/types/databases.type";
 
-const databases = { users: null };
+const databases = { users: null, commands: null };
 
 databases.users = lowdb(new lowdbFileSync(configs.databases.users));
 databases.users.defaults({ users: [] }).write();
+databases.commands = lowdb(new lowdbFileSync(configs.databases.commands));
+databases.commands.defaults({ commands: [{ title: "!start", response: "`Welcome! Try send !photo command or write any text`" }] }).write();
 
 /**
  * writeUser()
@@ -33,15 +35,47 @@ databases.users.defaults({ users: [] }).write();
  */
 const writeUser = async (json: DiscordUserInterface): Promise<void> => {
 
-	const user_id = databases.users.get("users").find({ id: json.id }).value();
+	const user = databases.users.get("users").find({ id: json.id }).value();
 
-	if (user_id) {
-		databases.users.get("users").find({ id: user_id.id }).assign(json).write();
+	if (user) {
+		databases.users.get("users").find({ id: user.id }).assign(json).write();
 	} else {
 		databases.users.get("users").push(json).write();
 	}
 
 };
 
-export { databases, writeUser };
+const writeCommand = async (json: DiscordCommandsInterface): Promise<void> => {
+	databases.commands.get("commands").push(json).write();
+};
+
+const getSingleCommand = async (json: DiscordCommandsInterface): Promise<void> => {
+
+	return databases.commands.get("commands").find({ title: json.title }).value();
+};
+
+const getAllCommands = async (): Promise<[]> => {
+
+	return databases.commands.get("commands").value();
+};
+
+
+
+const deleteSingleCommand = async (json: DiscordCommandsInterface): Promise<void> => {
+
+	const command = databases.commands.get("commands").find({ title: json.title }).value();
+
+	if (command) {
+		databases.commands.get("commands").remove({ title: json.title }).write();
+	}
+};
+const deleteAllCommands = async (): Promise<void> => {
+
+	databases.commands.get("commands").remove().write();
+
+};
+
+
+
+export { databases, writeUser, writeCommand, getSingleCommand, getAllCommands, deleteSingleCommand, deleteAllCommands };
 export default databases;

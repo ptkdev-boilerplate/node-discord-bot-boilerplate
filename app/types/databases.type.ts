@@ -78,3 +78,38 @@ export interface DiscordUserInterface {
 	 */
 	language_code?: string,
 }
+
+/**
+ * Discord Commands Interface
+ * =====================
+ *
+ * @Context: ctx.update.message.from
+ *
+ * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+ *
+ * @param { string } title - command title
+ * @param { string } response - bot response
+ *
+ */
+export interface DiscordCommandsInterface {
+	/**
+	 * Commands Interface
+	 * =====================
+	 *
+	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+	 *
+	 * @param { string } title - command title
+	 *
+	 */
+	title?: string,
+	/**
+	 * Commands Interface
+	 * =====================
+	 *
+	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+	 *
+	 * @param { string } response - bot response
+	 *
+	 */
+	response?: string,
+}
