@@ -54,7 +54,7 @@
 	"dependencies": {
 		"discord.js": "^12.5.3",
 		"lowdb": "^1.0.0",
-		"pm2": "^4.5.5",
+		"pm2": "^4.5.6",
 		"ts-node": "^9.1.1"
 	},
 	"devDependencies": {
@@ -63,8 +63,8 @@
 		"@types/lowdb": "^1.0.9",
 		"@types/node": "^14.14.37",
 		"@types/shelljs": "^0.8.8",
-		"@typescript-eslint/eslint-plugin": "^4.21.0",
-		"@typescript-eslint/parser": "^4.21.0",
+		"@typescript-eslint/eslint-plugin": "^4.22.0",
+		"@typescript-eslint/parser": "^4.22.0",
 		"all-contributors-cli": "^6.20.0",
 		"eslint": "^7.24.0",
 		"eslint-plugin-jest": "^24.3.5",
