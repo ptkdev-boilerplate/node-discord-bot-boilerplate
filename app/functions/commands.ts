@@ -28,7 +28,6 @@ const join = async (): Promise<void> => {
 			}
 			voice.channel.join();
 		}
-
 	});
 };
 /**
@@ -39,11 +38,13 @@ const join = async (): Promise<void> => {
  */
 const create = async (): Promise<void> => {
 	bot.on("message", async (message: Message) => {
-		if (message.author.bot) {  // If incoming message is from the bot
+		if (message.author.bot) {
+			// If incoming message is from the bot
 			return;
 		}
 
-		if (!message.member.hasPermission("ADMINISTRATOR")) { // if message author is an admin
+		if (!message.member.hasPermission("ADMINISTRATOR")) {
+			// if message author is an admin
 			message.reply("You must be an admin");
 			return;
 		}
@@ -52,11 +53,10 @@ const create = async (): Promise<void> => {
 
 			await message.reply(`Hi, type the command name without the "!"`);
 			try {
-
 				const botName = await message.channel.awaitMessages(filter, {
 					max: 1,
 					time: 15000,
-					errors: ["time"]
+					errors: ["time"],
 				});
 
 				const command = await databases.getSingleCommand({ title: `!${botName.first().content}` });
@@ -67,27 +67,27 @@ const create = async (): Promise<void> => {
 						const botMessage = await message.channel.awaitMessages(filter, {
 							max: 1,
 							time: 15000,
-							errors: ["time"]
+							errors: ["time"],
 						});
 
-						databases.writeCommand({ title: `!${botName.first().content}`, response: botMessage.first().content, isCustomCommand: true });
+						databases.writeCommand({
+							title: `!${botName.first().content}`,
+							response: botMessage.first().content,
+							isCustomCommand: true,
+						});
 						await message.reply(`Ok, bot created. Try !${botName.first().content}`);
-
 					} catch (collected) {
 						message.reply("You did not tell me what you want it to say. Ending the creation.");
 					}
 				} else {
 					message.reply(`The command **!${botName.first().content}** already exist, try again!`);
 				}
-
 			} catch (collected) {
 				message.reply("You did not tell me the name. Ending the creation.");
 			}
-
 		}
 	});
 };
-
 
 /**
  * command: !photo
@@ -100,15 +100,13 @@ const photo = async (): Promise<void> => {
 		if (message.content === "!photo") {
 			message.reply({
 				embed: {
-					"image": {
-						"url": "https://picsum.photos/200/300/"
-					}
-				}
+					image: {
+						url: "https://picsum.photos/200/300/",
+					},
+				},
 			});
 		}
-
 	});
-
 };
 
 /**
@@ -122,10 +120,8 @@ const start = async (): Promise<void> => {
 		if (message.content === "!start") {
 			message.reply(`Welcome! Try send !photo command or write any text`);
 		}
-
 	});
 };
-
 
 /**
  * Run bot

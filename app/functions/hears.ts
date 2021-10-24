@@ -13,8 +13,6 @@ import bot from "@app/functions/discord";
 import * as databases from "@app/functions/databases";
 import type { DiscordCommandsInterface } from "@app/types/databases.type";
 
-
-
 /**
  * hears: any custom command
  * =====================
@@ -27,14 +25,13 @@ const customCommands = async (): Promise<void> => {
 			return;
 		}
 		const commandList = await databases.getAllCommands();
-		commandList.filter((c: DiscordCommandsInterface) => c.isCustomCommand).forEach(async (command: DiscordCommandsInterface) => {
-			if (message.content === command.title) {
-				message.reply(command.response);
-
-			}
-		});
-
-
+		commandList
+			.filter((c: DiscordCommandsInterface) => c.isCustomCommand)
+			.forEach(async (command: DiscordCommandsInterface) => {
+				if (message.content === command.title) {
+					message.reply(command.response);
+				}
+			});
 	});
 };
 

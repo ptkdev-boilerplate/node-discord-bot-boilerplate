@@ -36,7 +36,7 @@ export interface DiscordUserInterface {
 	 * @param { number } id - discord
 	 *
 	 */
-	id: number,
+	id: number;
 	/**
 	 * User Interface
 	 * =====================
@@ -46,7 +46,7 @@ export interface DiscordUserInterface {
 	 * @param { boolean } is_bot - is user a bot
 	 *
 	 */
-	is_bot?: boolean,
+	is_bot?: boolean;
 	/**
 	 * User Interface
 	 * =====================
@@ -56,7 +56,7 @@ export interface DiscordUserInterface {
 	 * @param { string } first_name - user name from discord
 	 *
 	 */
-	first_name?: string,
+	first_name?: string;
 	/**
 	 * User Interface
 	 * =====================
@@ -66,7 +66,7 @@ export interface DiscordUserInterface {
 	 * @param { string } username - user username from discord
 	 *
 	 */
-	username?: string,
+	username?: string;
 	/**
 	 * User Interface
 	 * =====================
@@ -76,7 +76,7 @@ export interface DiscordUserInterface {
 	 * @param { string } language_code - user code language from OS
 	 *
 	 */
-	language_code?: string,
+	language_code?: string;
 }
 
 /**
@@ -102,7 +102,7 @@ export interface DiscordCommandsInterface {
 	 * @param { string } title - command title
 	 *
 	 */
-	title?: string,
+	title?: string;
 	/**
 	 * Commands Interface
 	 * =====================
@@ -112,7 +112,7 @@ export interface DiscordCommandsInterface {
 	 * @param { string } response - bot response
 	 *
 	 */
-	response?: string,
+	response?: string;
 	/**
 	 * Commands Interface
 	 * =====================
@@ -122,5 +122,5 @@ export interface DiscordCommandsInterface {
 	 * @param { boolean } isCustomCommand - is custom command
 	 *
 	 */
-	isCustomCommand?: boolean,
+	isCustomCommand?: boolean;
 }
