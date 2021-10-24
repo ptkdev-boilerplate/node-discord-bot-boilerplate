@@ -15,8 +15,8 @@
 		"allowJs": true,
 		"strict": true,
 		"strictNullChecks": true,
-        "strictFunctionTypes": true,
-        "forceConsistentCasingInFileNames": true,
+		"strictFunctionTypes": true,
+		"forceConsistentCasingInFileNames": true,
 		"paths": {
 			"@databases/*": ["./database/*"],
 			"@translations/*": ["./app/translations/*"],
