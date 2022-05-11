@@ -2,7 +2,7 @@
 	"package_name": "node-discord-bot-boilerplate",
 	"package_org": "@ptkdev",
 	"display_name": "Node Discord BOT Boilerplate",
-	"description": "Create your discord bot with this friendly boilerplate. Use this repository as template for your bot",
+	"description": "Create your discord bot with this user friendly boilerplate. Use this repository as template for your bot",
 	"author": "Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)",
 	"author_markdown": "[Patryk Rzucidło](https://ptk.dev) ([@PTKDev](https://twitter.com/ptkdev)) <[support@ptkdev.io](mailto:support@ptkdev.io)>",
 	"author_url": "https://ptk.dev",

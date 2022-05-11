@@ -6,7 +6,7 @@
 
 <!-- all-shields/header-badges:END -->
 
-Create your discord bot with this friendly boilerplate. Use this repository as template for your bot
+Create your discord bot with this user friendly boilerplate. Use this repository as template for your bot
 
 This is a [github template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/), you can fork it or [use as template](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/generate) for start new project with this repository as hello-world. I hate start new project with empty template, often i missing correct configuration, readme instruction or i need of samples of code. Use this repository as template solve this problem.
 
@@ -60,7 +60,7 @@ This is a [github template](https://github.blog/2019-06-06-generate-new-reposito
 -   B. Click "oAuth2" on left menu, go to bottom and set `scope` as `BOT` and check all write permissions. Copy generated link and invite bot to your server.
 
 3. Run with correct values: `npm run init:token --token asdfghjkl`
-4. Run `npm run init`
+4. Run `npm install`
 5. Run `npm run start-pm2`
 6. Write `/start` on discord bot.
 
@@ -75,7 +75,7 @@ This is a [github template](https://github.blog/2019-06-06-generate-new-reposito
 -   B. Click "oAuth2" on left menu, go to bottom and set `scope` as `BOT` and check all write permissions. Copy generated link and invite bot to your server.
 
 3. Run with correct values: `npm run init:token --token asdfghjkl`
-4. Run `npm run init`
+4. Run `npm install`
 5. Run `npm run dev`
 6. Write `/start` on discord bot.
 
@@ -88,7 +88,7 @@ If you want replace all strings (example: package name, author, urls, etc...) in
 Deploy bot to your server and:
 
 1. Run with correct values: `npm run init:token --token asdfghjkl`
-2. Run init `npm run init`
+2. Run init npm install
 3. Generate release `npm run release`
 4. Start bot `npm run start-pm2`
 
@@ -104,7 +104,7 @@ Thanks to all our backers! 🙏 Donate 3$ or more on [paypal](https://www.paypal
 
 ## 👨‍💻 Contributing
 
-I ❤️ contributions! I will happily accept your pull request! Translations, grammatical corrections (GrammarNazi you are welcome! Yes my English is bad, sorry), etc... Do not be afraid, if the code is not perfect we will work together 👯 and remember to insert your name in `.all-contributorsrc` and `package.json` file.
+I ❤️ contributions! I will happily accept your pull request! (**IMPORTANT**: Only to nightly branch!) Translations, grammatical corrections (GrammarNazi you are welcome! Yes my English is bad, sorry), etc... Do not be afraid, if the code is not perfect we will work together 👯 and remember to insert your name in `.all-contributorsrc` and `package.json` file.
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -157,4 +157,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 -   Images and logos have **CC BY-NC 4.0 License**
 -   Documentations and Translations have **CC BY 4.0 License**
 
-###### Copyleft (c) 2021 [Patryk Rzucidło](https://ptk.dev) ([@PTKDev](https://twitter.com/ptkdev)) <[support@ptkdev.io](mailto:support@ptkdev.io)>
+###### Copyleft (c) 2022 [Patryk Rzucidło](https://ptk.dev) ([@PTKDev](https://twitter.com/ptkdev)) <[support@ptkdev.io](mailto:support@ptkdev.io)>

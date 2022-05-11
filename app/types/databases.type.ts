@@ -2,7 +2,7 @@
  * Databases Interfaces
  * =====================
  *
- * Create your discord bot with this friendly boilerplate. Use this repository as template for your bot
+ * Create your discord bot with this user friendly boilerplate. Use this repository as template for your bot
  *
  * @contributors: Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)
  *                Alì Shadman [@AliShadman95]
@@ -17,7 +17,7 @@
  *
  * @Context: ctx.update.message.from
  *
- * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+ * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.interfaces.ts)
  *
  * @param { number } id - discord
  * @param { boolean } is_bot - is user a bot
@@ -31,7 +31,7 @@ export interface DiscordUserInterface {
 	 * Discord User Interface
 	 * =====================
 	 *
-	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.interfaces.ts)
 	 *
 	 * @param { number } id - discord
 	 *
@@ -41,7 +41,7 @@ export interface DiscordUserInterface {
 	 * User Interface
 	 * =====================
 	 *
-	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.interfaces.ts)
 	 *
 	 * @param { boolean } is_bot - is user a bot
 	 *
@@ -51,7 +51,7 @@ export interface DiscordUserInterface {
 	 * User Interface
 	 * =====================
 	 *
-	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.interfaces.ts)
 	 *
 	 * @param { string } first_name - user name from discord
 	 *
@@ -61,7 +61,7 @@ export interface DiscordUserInterface {
 	 * User Interface
 	 * =====================
 	 *
-	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.interfaces.ts)
 	 *
 	 * @param { string } username - user username from discord
 	 *
@@ -71,7 +71,7 @@ export interface DiscordUserInterface {
 	 * User Interface
 	 * =====================
 	 *
-	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.interfaces.ts)
 	 *
 	 * @param { string } language_code - user code language from OS
 	 *
@@ -85,7 +85,7 @@ export interface DiscordUserInterface {
  *
  * @Context: ctx.update.message.from
  *
- * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+ * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.interfaces.ts)
  *
  * @param { string } title - command title
  * @param { string } response - bot response
@@ -97,7 +97,7 @@ export interface DiscordCommandsInterface {
 	 * Commands Interface
 	 * =====================
 	 *
-	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.interfaces.ts)
 	 *
 	 * @param { string } title - command title
 	 *
@@ -107,7 +107,7 @@ export interface DiscordCommandsInterface {
 	 * Commands Interface
 	 * =====================
 	 *
-	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.interfaces.ts)
 	 *
 	 * @param { string } response - bot response
 	 *
@@ -117,7 +117,7 @@ export interface DiscordCommandsInterface {
 	 * Commands Interface
 	 * =====================
 	 *
-	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+	 * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.interfaces.ts)
 	 *
 	 * @param { boolean } isCustomCommand - is custom command
 	 *

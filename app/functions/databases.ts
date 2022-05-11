@@ -42,7 +42,7 @@ databases.commands
  *
  * @Context: ctx.update.message.from
  *
- * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.type.ts)
+ * @interface [DiscordUserInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/webcomponent/types/databases.interfaces.ts)
  *
  * @param { DiscordUserInterface } json - discord user object
  *

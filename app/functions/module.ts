@@ -18,7 +18,7 @@ import type { ModuleInterface, ModuleResponseInterface } from "@app/types/module
  *
  * Print hello-world
  *
- * @interface [ModuleInterface ModuleResponseInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/types/module.type.ts)
+ * @interface [ModuleInterface ModuleResponseInterface](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/app/types/module.interfaces.ts)
  *
  * @param {string} {text} - input string
  *
